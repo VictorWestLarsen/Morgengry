@@ -11,16 +11,29 @@ namespace Morgengry
         private List<Book> books;
         public void AddBook(Book book)
         {
-
+            books.Add(book);
         }
-        public Book GetBook(int ItemId)
+        public Book GetBook(int itemId)
         {
-
+            foreach(Book book in books)
+            {
+                if (book.ItemId.Equals(itemId))
+                {
+                    return book;
+                }
+                
+            }
+            return null;
         }
 
         public double GetTotalValue()
         {
-
+            double value = 0;
+            foreach(Book book in books)
+            {
+                value += book.Price;
+            }
+            return value;
         }
     }
 }
