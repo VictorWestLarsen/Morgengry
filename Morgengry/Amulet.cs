@@ -14,7 +14,6 @@ namespace Morgengry
     }
     public class Amulet : Merchandise
     {
-        public string ItemId;
         public Level Quality;
         public string Design;
 
@@ -26,9 +25,8 @@ namespace Morgengry
         {
 
         }
-        public Amulet(string itemId, Level quality, string design)
+        public Amulet(string itemId, Level quality, string design) : base(itemId)
         {
-            ItemId = itemId;
             Quality = quality;
             Design = design;
         }
