@@ -26,16 +26,6 @@ namespace Morgengry
             return null;
         }
 
-        public double GetTotalValue()
-        {
-            double value = 0;
-            foreach (Amulet amulet in amulets)
-            {
-                value += Utility.GetValueOfAmulet(amulet);
-                
-            }
-            return value;
 
-        }
     }
 }
