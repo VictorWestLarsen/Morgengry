@@ -31,7 +31,7 @@ namespace Morgengry
             double value = 0;
             foreach (Course course in courses)
             {
-                value += Utility.GetValueOfCourse(course);
+                value += course.GetValue();
 
             }
             return value;

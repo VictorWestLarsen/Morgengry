@@ -14,6 +14,9 @@ namespace Morgengry
     }
     public class Amulet : Merchandise
     {
+        public double LowQualityValue = 12.5;
+        public double MediumQualityValue = 20;
+        public double HighQualityValue = 27.5;
         public Level Quality;
         public string Design;
 
@@ -33,6 +36,22 @@ namespace Morgengry
         public override string ToString()
         {
             return "ItemId: " + ItemId + ", Quality: " + Quality + ", Design: " + Design;
+        }
+        public override double GetValue()
+        {
+            
+            switch (Quality)
+            {
+                case Level.high:
+                    return HighQualityValue;
+                case Level.medium:
+                    return MediumQualityValue;
+                case Level.low:
+                    return LowQualityValue;
+                default:
+                    return LowQualityValue;
+            }
+
         }
     }
 }

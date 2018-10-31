@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Morgengry
 {
-    class ValuableRepository
+    public class ValuableRepository
     {
        private List<IValuable> valuables = new List<IValuable>();
 
-        public void GetValuable(IValuable valuable)
+        public void AddValuable(IValuable valuable)
         {
             valuables.Add(valuable);
         }
@@ -45,7 +45,7 @@ namespace Morgengry
             return price;
         }
 
-        public int count()
+        public int Count()
         {
             return valuables.Count;
         }
